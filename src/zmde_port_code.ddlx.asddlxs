@@ -1,0 +1,62 @@
+@Metadata.layer: #CORE
+@UI.headerInfo:{
+    typeName: 'Port Code Details',
+    typeNamePlural: 'Port Code Details',
+    title:{ type: #STANDARD, value: 'SapPortCode' } }
+annotate entity zc_port_code
+    with 
+{ @UI.facet: [{ id : 'SapPortCode',
+  purpose: #STANDARD,
+  type: #IDENTIFICATION_REFERENCE,
+  label: 'Port Code Details',
+   position: 10 }]
+  @UI.lineItem:        [{ position: 10 }]
+  @UI.identification: [{ position: 10 }]
+  @UI.selectionField: [{ position: 10 }]
+  @EndUserText.label: 'SAP Port Code'
+  SapPortCode;
+
+  @UI.lineItem:        [{ position: 20 }]
+  @UI.identification: [{ position: 20 }]
+  @EndUserText.label: 'GST Port Code'
+  GstPortCode;
+
+  @UI.lineItem:        [{ position: 30 }]
+  @UI.identification: [{ position: 30 }]
+  @EndUserText.label: 'Name'
+  name1;
+
+  @UI.lineItem:        [{ position: 40 }]
+  @UI.identification: [{ position: 40 }]
+  @EndUserText.label: 'Port GSTIN'
+  port_gstin;
+
+  @UI.lineItem:        [{ position: 50 }]
+  @UI.identification: [{ position: 50 }]
+  @UI.multiLineText: true
+  @EndUserText.label: 'Port Address 1'
+  PortAddress1;
+
+  @UI.lineItem:        [{ position: 60 }]
+  @UI.identification: [{ position: 60 }]
+    @UI.multiLineText: true
+  @EndUserText.label: 'Port Address 2'
+  PortAddress2;
+
+  @UI.lineItem:        [{ position: 70 }]
+  @UI.identification: [{ position: 70 }]
+  @EndUserText.label: 'City'
+  City;
+
+  @UI.lineItem:        [{ position: 80 }]
+  @UI.identification: [{ position: 80 }]
+  @EndUserText.label: 'Pincode'
+  Pincode;
+
+  @UI.lineItem:        [{ position: 90 }]
+  @UI.identification: [{ position: 90 }]
+  @EndUserText.label: 'State Code'
+  StateCode;
+
+
+}

@@ -1,0 +1,4 @@
+@EndUserText.label: 'service definition for port code'
+define service Zsd_port_code {
+  expose zc_port_code;
+}

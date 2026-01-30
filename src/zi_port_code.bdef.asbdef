@@ -1,0 +1,29 @@
+managed implementation in class zbp_i_port_code unique;
+strict ( 2 );
+
+define behavior for zi_port_code //alias <alias_name>
+persistent table ztb_port_code
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( readonly : update ) SapPortCode;
+  mapping for ztb_port_code
+    {
+      SapPortCode   = sap_port_code;
+      GstPortCode   = gst_port_code;
+      name1         = name1;
+      port_gstin    = port_gstin;
+      PortAddress1  = port_address_1;
+      PortAddress2  = port_address_2;
+      City          = city;
+      Pincode       = pincode;
+      StateCode     = state_code;
+      CreatedBy     = created_by;
+      CreatedAt     = created_at;
+      LastChangedBy = last_changed_by;
+      LastChangedAt = last_changed_at;
+    } }
